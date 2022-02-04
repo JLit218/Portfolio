@@ -240,6 +240,7 @@ img {
   }
 
   &-b {
+    border-top: 3px solid $main-color;
     background: $bg-image no-repeat 20% 30% / cover;
     .contact-info {
       display: grid;
@@ -289,3 +290,5 @@ img {
     }
   }
 }
+// Import Media Queries
+@import "media";
