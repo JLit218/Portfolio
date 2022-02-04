@@ -177,6 +177,7 @@ img {
       grid-area: bio;
       border-left: 3px solid $main-color;
       padding: 0.8rem;
+      margin-bottom: 1rem;
     }
     .education-1 {
       position: relative;
@@ -196,9 +197,67 @@ img {
   }
 }
 
+// Contact Page
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid-Areas
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type="submit"] {
+      width: 50%;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+
+  &-b {
+    background: $bg-image no-repeat 20% 30% / cover;
+    .contact-info {
+      display: grid;
+      grid-template-columns: auto auto;
+      text-align: center;
+      margin: 1rem;
+    }
+  }
+}
+
+// Thank You Page
+#thanks {
+  background: $bg-image no-repeat center right / cover;
+  height: 100vh;
+}
+
 // Footer
 #main-footer {
-  margin-top: 1rem;
   background: $dark-color;
   color: #fff;
   height: 5rem;

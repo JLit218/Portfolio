@@ -414,6 +414,7 @@ img {
   grid-area: bio;
   border-left: 3px solid #805ad8;
   padding: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 #about-a .education-1 {
@@ -437,8 +438,77 @@ img {
   margin: 1rem;
 }
 
+#contact-a .text-fields {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "name email" "subject phone" "message message";
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+#contact-a .text-fields .name-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+#contact-a .text-fields .subject-input {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: subject;
+}
+
+#contact-a .text-fields .email-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: email;
+}
+
+#contact-a .text-fields .phone-input {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: phone;
+}
+
+#contact-a .text-fields .message-input {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: message;
+  height: 100px;
+}
+
+#contact-a .text-fields .text-input {
+  padding: 0.5rem 1rem;
+}
+
+#contact-a button[type="submit"] {
+  width: 50%;
+}
+
+#contact-a button[type="submit"]:hover {
+  background-color: #805ad8;
+}
+
+#contact-b {
+  background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
+}
+
+#contact-b .contact-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  text-align: center;
+  margin: 1rem;
+}
+
+#thanks {
+  background: url("../img/showcase.jpg") no-repeat center right/cover;
+  height: 100vh;
+}
+
 #main-footer {
-  margin-top: 1rem;
   background: #333;
   color: #fff;
   height: 5rem;
